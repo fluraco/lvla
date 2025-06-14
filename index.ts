@@ -1,5 +1,7 @@
-import { registerRootComponent } from 'expo';
+// Import our custom polyfills
+import './src/utils/polyfills';
 
+import { registerRootComponent } from 'expo';
 import App from './App';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);

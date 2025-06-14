@@ -1,0 +1,39 @@
+# Arşiv dosyaları
+Archive*.zip
+
+# Büyük veri dosyaları
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Gereksiz SQL dosyaları
+*.sql
+
+# Git
+.git/
+
+# Node modülleri (EAS build kendi bağımlılıklarını yükleyecek)
+# node_modules/
+
+# Derleme çıktıları
+android/app/build/
+ios/build/
+
+# Diğer gereksiz dosyalar
+.DS_Store
+
+# These are files that are already in the tarball sent to EAS Build, 
+# so we can tell EAS CLI to ignore them when uploading source code.
+.git
+node_modules
+.yarn
+# /android
+# /ios
+
+# Cache & logs
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log* 

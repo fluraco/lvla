@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "lovlalive",
+    "name": "Lovla - Flört ve Arkadaşlık",
     "slug": "lovlalive",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -12,18 +12,80 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#FF4B7E",
+      "androidMode": "default",
+      "androidCollapsedTitle": "Lovla'dan yeni bildirim"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "remote-notification"
+        ]
+      }
     },
     "android": {
+      "package": "com.lovlalive.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.ACTIVITY_RECOGNITION"
+      ],
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e148785c-a765-45cf-bea6-80ccdd40a455"
+      }
+    },
+    "plugins": [
+      "expo-web-browser",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#FF4B7E",
+          "sounds": [
+            "./assets/sounds/notification.wav"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": false,
+          "cameraPermission": "Fotoğraf çekmek için kamera erişimi gerekli.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": false,
+          "savePhotosPermission": false,
+          "isAccessMediaLocationEnabled": false
+        }
+      ]
+    ],
+    "scheme": "com.lovlalive.app",
+    "owner": "halilp"
+  },
+  "_comments": {
+    "productionKeystoreSHA1": "B5:E2:66:F4:96:23:10:67:FA:A7:4A:2D:08:BD:B4:C8:09:B3:EC:CD",
+    "debugKeystoreSHA1": "5E:8F:16:06:2E:A3:CD:2C:4A:0D:54:78:76:BA:A6:F3:8C:AB:F6:25"
   }
 }
